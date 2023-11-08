@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
     public float moveSpeed = 5f;
     public float RollTime;
     bool rollOnce = false;
+    public float rollBoost;
 
-    private float rollBoost = 2f;
     private float rollTime;
     private Rigidbody rb;
 

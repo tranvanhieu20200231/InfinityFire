@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +9,6 @@ public class Weapon : MonoBehaviour
     public GameObject muzzle;
     public float TimeBtwFire;
     public float bulletForce;
-
     private float timeBtwFire;
 
     void Update()
@@ -25,7 +24,7 @@ public class Weapon : MonoBehaviour
     void RotateGun()
     {
         // Xac dinh vi tri con tro chuot
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0.5f, -0.5f, 0).normalized;
         Vector2 lookDir = mousePos - transform.position;
         // Xac dinh goc xoay sung
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
