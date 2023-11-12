@@ -6,15 +6,16 @@ public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float RollTime;
-    bool rollOnce = false;
+    public bool rollOnce = false;
     public float rollBoost;
+    public float RollCD;
 
+    private float rollCDT = 0;
     private float rollTime;
-    private Rigidbody rb;
 
     public SpriteRenderer characterSR;
-    public Animator animator;
-    public Vector3 moveInput;
+    private Animator animator;
+    private Vector3 moveInput;
 
     private void Start()
     {
@@ -56,14 +57,15 @@ public class Player : MonoBehaviour
 
     void Roll()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && rollOnce == false)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && rollOnce == false && rollCDT <= 0)
         {
             moveSpeed += rollBoost;
             rollTime = RollTime;
             rollOnce = true;
-
+            rollCDT = RollCD;
             animator.SetBool("Roll", true);
         }
+        rollCDT -= Time.deltaTime;
 
         if (rollTime <= 0 && rollOnce == true)
         {

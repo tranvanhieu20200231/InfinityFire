@@ -23,12 +23,12 @@ public class Weapon : MonoBehaviour
 
     void RotateGun()
     {
-        // Xac dinh vi tri con tro chuot
+        // Xac dinh vi tri tam con tro chuot
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0.5f, -0.5f, 0).normalized;
         Vector2 lookDir = mousePos - transform.position;
         // Xac dinh goc xoay sung
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-
+        
         Quaternion rotation = Quaternion.Euler(0, 0, angle);
         transform.rotation = rotation;
         // Doi chieu sung khi xoay
@@ -39,6 +39,25 @@ public class Weapon : MonoBehaviour
         else
         {
             transform.localScale = new Vector3(1, 1, 0);
+        }
+        // Doi layer sung khi xoay
+        if (transform.eulerAngles.z > 0 && transform.eulerAngles.z < 180)
+        {
+            SetOrderInLayer(0);
+        }
+        else
+        {
+            SetOrderInLayer(2);
+        }
+    }
+
+    void SetOrderInLayer(int order)
+    {
+        // Order in layer cho SpriteRenderer
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.sortingOrder = order;
         }
     }
 

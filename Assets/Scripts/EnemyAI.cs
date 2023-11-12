@@ -5,6 +5,7 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
+    [Header("Move")]
     public bool roaming = true;
     public bool updateContinuesPath;
     bool reachDestination = false;
@@ -12,6 +13,7 @@ public class EnemyAI : MonoBehaviour
     public float nextWPDistance;
     public Seeker seeker;
     public SpriteRenderer characterSR;
+    private Animator animator;
 
     Path path;
 
@@ -19,9 +21,11 @@ public class EnemyAI : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         InvokeRepeating("CalculatePath", 0f, 0.5f);
         reachDestination = true;
     }
+
     void CalculatePath()
     {
         Vector2 target = FindTarget();
@@ -29,6 +33,11 @@ public class EnemyAI : MonoBehaviour
         if (seeker.IsDone() && (reachDestination || updateContinuesPath))
         {
             seeker.StartPath(transform.position, target, OnPathComplete);
+            animator.SetBool("Move", true);
+        }
+        else
+        {
+            animator.SetBool("Move", false);
         }
     }
 
@@ -83,7 +92,7 @@ public class EnemyAI : MonoBehaviour
 
     Vector2 FindTarget()
     {
-        // Xac dinh vi tri Player, bay xung quanh hoac lao thang den
+        // Xac dinh vi tri Player va di chuyen xung quanh
         Vector3 playerPos = FindObjectOfType<Player>().transform.position;
         if (roaming == true)
         {
@@ -91,7 +100,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            return playerPos;
+            return (Vector2)playerPos + (Random.Range(0.5f, 1f) * new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized);
         }
     }
 }
