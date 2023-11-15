@@ -14,9 +14,9 @@ TagManager:
   - Obstacle
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Bullet
   - 
   - 
   - 

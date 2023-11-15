@@ -9,14 +9,17 @@ public class Weapon : MonoBehaviour
     public GameObject muzzle;
     public float TimeBtwFire;
     public float bulletForce;
+    public bool shotGun = false;
+    public int bulletsPerShot = 20;
     private float timeBtwFire;
-
+    [SerializeField] private AudioSource Fire;
     void Update()
     {
         RotateGun();
         timeBtwFire -= Time.deltaTime;
         if (Input.GetMouseButton(0) && timeBtwFire < 0)
         {
+            Fire.Play();
             FireBullet();
         }
     }
@@ -65,10 +68,37 @@ public class Weapon : MonoBehaviour
     {
         timeBtwFire = TimeBtwFire;
 
-        GameObject bullerTmp = Instantiate(bullet, firePos.position, Quaternion.identity);
+        if (shotGun)
+        {
+            for (int i = 0; i < bulletsPerShot; i++)
+            {
+                FireShotGunBullet();
+            }
+        }
+        else
+        {
+            FireSingleBullet();
+        }
+
         // Hieu ung
         Instantiate(muzzle, firePos.position, transform.rotation, transform);
-        Rigidbody2D rb = bullerTmp.GetComponent<Rigidbody2D>();
+    }
+
+    void FireSingleBullet()
+    {
+        GameObject bulletTmp = Instantiate(bullet, firePos.position, Quaternion.identity);
+        Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
         rb.AddForce(transform.right * bulletForce, ForceMode2D.Impulse);
+    }
+
+    void FireShotGunBullet()
+    {
+        float spreadAngle = Random.Range(-15f, 15f);
+        GameObject bulletTmp = Instantiate(bullet, firePos.position, Quaternion.identity);
+        // Goc lech ngau nhien
+        Vector2 bulletDirection = Quaternion.Euler(0, 0, spreadAngle) * transform.right;
+
+        Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
+        rb.AddForce(bulletDirection * bulletForce, ForceMode2D.Impulse);
     }
 }
