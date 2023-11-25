@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6573190007503408061}
   - component: {fileID: 3925325342279919671}
   - component: {fileID: 3351544562751727145}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: PistolBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,3 +153,4 @@ MonoBehaviour:
   minDamage: 7
   maxDamage: 10
   playerBullet: 1
+  pierce: 1
