@@ -5912,8 +5912,7 @@ MonoBehaviour:
   miniBossPrefab: {fileID: 6764359183825699961, guid: 8be33dcb812a67d49b57438543f4be3e, type: 3}
   spawnInterval: 3
   maxEnemies: 20
-  maxMiniBoss: 1
-  scoreSpaw: 500
+  scoreSpaw: 20
   score: {fileID: 7789284}
 --- !u!4 &1192074080
 Transform:

@@ -7,11 +7,8 @@ public class EnemyManager : MonoBehaviour
     public GameObject miniBossPrefab;
     public float spawnInterval = 3f;
     public int maxEnemies = 10;
-    public int maxMiniBoss = 1;
     public int scoreSpaw = 200;
     private int enemyIndex = 0;
-    private int currentScoreSpaw = 0;
-    private int miniBossCount = 0;
 
     public Score score;
     private float nextSpawnTime;
@@ -36,8 +33,6 @@ public class EnemyManager : MonoBehaviour
 
             enemyIndex = Random.Range(0, enemyPrefab.Length);
             GameObject enemy = Instantiate(enemyPrefab[enemyIndex], spawnPosition, Quaternion.identity);
-
-            currentScoreSpaw = score.currentScore;
         }
     }
 
@@ -46,10 +41,9 @@ public class EnemyManager : MonoBehaviour
         Vector2 randomOffset = Random.insideUnitCircle.normalized * 20f;
         Vector3 spawnPosition = spawnPoint.position + new Vector3(randomOffset.x, randomOffset.y, 0f);
 
-        if (currentScoreSpaw >= scoreSpaw && miniBossCount < maxMiniBoss)
+        if (score.currentScore >= scoreSpaw)
         {
-            miniBossCount++;
-            currentScoreSpaw = 0;
+            scoreSpaw = scoreSpaw + 1000;
             GameObject miniBoss = Instantiate(miniBossPrefab, spawnPosition, Quaternion.identity);
         }
     }
