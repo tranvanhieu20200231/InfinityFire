@@ -299,6 +299,10 @@ MonoBehaviour:
   maxHealth: 50
   scoreEnemy: 30
   enemyHealthBar: {fileID: 5635007271847081097}
+  damagePopup: {fileID: 5583784720651983954, guid: 1f39af48d70f78549a0a5ad3c5e390e6, type: 3}
+  floatingPoints: {fileID: 8804536031582850277, guid: 1f39af48d70f78549a0a5ad3c5e390e6, type: 3}
+  fxDestroy: {fileID: 3372651187090120563, guid: b5885e5b82ee7484a831f5570db785b5, type: 3}
+  xFXDestroy: 1
   OnDeath:
     m_PersistentCalls:
       m_Calls:

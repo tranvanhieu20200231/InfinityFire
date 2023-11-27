@@ -5910,9 +5910,10 @@ MonoBehaviour:
   - {fileID: 2600480956863597893, guid: b264db42b69d0cc44944f6d09d44621f, type: 3}
   spawnPoint: {fileID: 1192074080}
   miniBossPrefab: {fileID: 6764359183825699961, guid: 8be33dcb812a67d49b57438543f4be3e, type: 3}
-  spawnInterval: 3
-  maxEnemies: 20
-  scoreSpaw: 20
+  spawnWarningPrefab: {fileID: 716764528052617241, guid: a85801ed0013abf469081f60a00902d2, type: 3}
+  spawnInterval: 5
+  maxEnemies: 100
+  scoreSpaw: 500
   score: {fileID: 7789284}
 --- !u!4 &1192074080
 Transform:
@@ -7404,7 +7405,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652881641}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.09, y: 0.06, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
