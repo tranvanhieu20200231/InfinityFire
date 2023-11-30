@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     public int bulletsPerShot = 20;
     private float timeBtwFire;
     [SerializeField] private AudioSource Fire;
+
     void Update()
     {
         RotateGun();

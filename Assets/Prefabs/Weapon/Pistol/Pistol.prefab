@@ -138,6 +138,9 @@ MonoBehaviour:
   shotGun: 0
   bulletsPerShot: 10
   Fire: {fileID: 8038623687846975654}
+  cameraShake: {fileID: 0}
+  shakeIntensity: 0.5
+  shakeTime: 0.2
 --- !u!82 &8038623687846975654
 AudioSource:
   m_ObjectHideFlags: 0

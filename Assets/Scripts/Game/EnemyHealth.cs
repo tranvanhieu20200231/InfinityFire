@@ -11,6 +11,13 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] int scoreEnemy;
     Score score;
 
+    [Header("Camera Shake Parameters")]
+    private CameraShake cameraShake;
+    private float shakeIntensity = 3;
+    private float shakeTime = 0.1f;
+    [SerializeField] private AudioSource enemyHurt;
+
+    private bool isDead = false;
     public EnemyHealthBar enemyHealthBar;
     public DamagePopup damagePopup;
     public GameObject floatingPoints;
@@ -34,11 +41,15 @@ public class EnemyHealth : MonoBehaviour
     private void Start()
     {
         animator = GetComponentInChildren<Animator>();
+
         currentHealth = maxHealth;
         damagePopup.UpdateText(0);
         enemyHealthBar.UpdateBar(currentHealth, maxHealth);
         score = FindObjectOfType<Score>();
+
         enemyRenderer = GetComponentInChildren<Renderer>();
+
+        cameraShake = GameObject.Find("CameraFollowPlayer").GetComponent<CameraShake>();
     }
 
     public void TakeDamage(int damage)
@@ -54,6 +65,8 @@ public class EnemyHealth : MonoBehaviour
         }
         damagePopup.UpdateText(damage);
         enemyHealthBar.UpdateBar(currentHealth, maxHealth);
+        enemyHurt.Play();
+        cameraShake.ShakeCamera(shakeIntensity, shakeTime);
         StartCoroutine(FlashCharacter());
 
         Instantiate(floatingPoints, transform.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0), Quaternion.identity);
@@ -82,9 +95,13 @@ public class EnemyHealth : MonoBehaviour
 
     public void Death()
     {
-        score.UpdateScore(scoreEnemy);
+        if (!isDead)
+        {
+            isDead = true;
 
-        Destroy(gameObject);
-        Instantiate(fxDestroy, transform.position, Quaternion.identity);
+            score.UpdateScore(scoreEnemy);
+            Destroy(gameObject);
+            Instantiate(fxDestroy, transform.position, Quaternion.identity);
+        }
     }
 }

@@ -14,16 +14,24 @@ public class EnemyManager : MonoBehaviour
 
     public Score score;
     private float nextSpawnTime;
+    private bool isSpawningMiniBoss = false;
     // Bug Spawn vao vi tri "Obstacle"
     void Update()
     {
         if (Time.time >= nextSpawnTime)
         {
-            SpawnWarningAndEnemy();
+            if (!isSpawningMiniBoss)
+            {
+                SpawnWarningAndEnemy();
+            }
             nextSpawnTime = Time.time + spawnInterval;
         }
 
-        SpawnMiniBoss();
+        if (!isSpawningMiniBoss && score.currentScore >= scoreSpaw)
+        {
+            isSpawningMiniBoss = true;
+            SpawnMiniBoss();
+        }
     }
 
     void SpawnWarningAndEnemy()
@@ -57,12 +65,8 @@ public class EnemyManager : MonoBehaviour
         Vector2 randomOffset = Random.insideUnitCircle * 20f;
         Vector3 spawnPosition = spawnPoint.position + new Vector3(randomOffset.x, randomOffset.y, 0f);
 
-        if (score.currentScore >= scoreSpaw)
-        {
-            GameObject spawnWarning = Instantiate(spawnWarningPrefab, spawnPosition, Quaternion.identity);
-
-            StartCoroutine(SpawnMiniBossAfterDelay(spawnWarning, spawnPosition));
-        }
+        GameObject spawnWarning = Instantiate(spawnWarningPrefab, spawnPosition, Quaternion.identity);
+        StartCoroutine(SpawnMiniBossAfterDelay(spawnWarning, spawnPosition));
     }
 
     IEnumerator SpawnMiniBossAfterDelay(GameObject spawnWarning, Vector3 spawnPosition)
@@ -71,5 +75,7 @@ public class EnemyManager : MonoBehaviour
 
         scoreSpaw = scoreSpaw + 1000;
         GameObject miniBoss = Instantiate(miniBossPrefab, spawnPosition, Quaternion.identity);
+
+        isSpawningMiniBoss = false;
     }
 }
