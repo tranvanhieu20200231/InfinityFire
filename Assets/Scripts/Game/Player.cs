@@ -6,20 +6,24 @@ public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float RollTime;
-    public bool rollOnce = false;
     public float rollBoost;
     public float RollCD;
+    public bool rollOnce = false;
 
     private float rollCDT = 0;
     private float rollTime;
 
+    public CDTimeBar CDTBar;
     public SpriteRenderer characterSR;
     private Animator animator;
     private Vector3 moveInput;
+    private bool rollButton = false;
 
     private void Start()
     {
         animator = GetComponentInChildren<Animator>();
+
+        CDTBar.UpdateCDTimeBar(rollCDT, RollCD);
     }
 
     private void Update()
@@ -55,17 +59,25 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void RollButtonClicked()
+    {
+        rollButton = true;
+    }
+
     void Roll()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && rollOnce == false && rollCDT <= 0)
+        if ((Input.GetKeyDown(KeyCode.LeftShift) || rollButton) && rollOnce == false && rollCDT <= 0)
         {
             moveSpeed += rollBoost;
             rollTime = RollTime;
             rollOnce = true;
             rollCDT = RollCD;
+            rollButton = false;
+
             animator.SetBool("Roll", true);
         }
         rollCDT -= Time.deltaTime;
+        CDTBar.UpdateCDTimeBar(rollCDT, RollCD);
 
         if (rollTime <= 0 && rollOnce == true)
         {

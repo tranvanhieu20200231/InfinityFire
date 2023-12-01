@@ -4,6 +4,9 @@ public class WeaponSwitching : MonoBehaviour
 {
     public GameObject[] weapons;
     private int currentWeaponIndex = 0;
+    private bool Weapon1 = false;
+    private bool Weapon2 = false;
+    private bool Weapon3 = false;
 
     void Start()
     {
@@ -14,19 +17,22 @@ public class WeaponSwitching : MonoBehaviour
     void Update()
     {
         // Lua chon vu khi key
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) || Weapon1)
         {
             currentWeaponIndex = 0;
+            Weapon1 = false;
             SwitchWeapon();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2) || Weapon2)
         {
             currentWeaponIndex = 1;
+            Weapon2 = false;
             SwitchWeapon();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha3) || Weapon3)
         {
             currentWeaponIndex = 2;
+            Weapon3 = false;
             SwitchWeapon();
         }
 
@@ -44,6 +50,21 @@ public class WeaponSwitching : MonoBehaviour
             currentWeaponIndex = (currentWeaponIndex - 1 + weapons.Length) % weapons.Length;
             SwitchWeapon();
         }
+    }
+
+    public void Weapon1ButtonClicked()
+    {
+        Weapon1 = true;
+    }
+
+    public void Weapon2ButtonClicked()
+    {
+        Weapon2 = true;
+    }
+
+    public void Weapon3ButtonClicked()
+    {
+        Weapon3 = true;
     }
 
     void SwitchWeapon()

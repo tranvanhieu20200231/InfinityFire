@@ -18,6 +18,11 @@ public class Bullet : MonoBehaviour
             other.GetComponent<PlayerHealth>().TakeDamage(damage);
             Destroy(gameObject);
         }
+        // Xu ly va cham khien
+        if (other.CompareTag("Shield") && !playerBullet)
+        {
+            Destroy(gameObject);
+        }
 
         if (other.CompareTag("Enemy") && playerBullet && !pierce)
         {

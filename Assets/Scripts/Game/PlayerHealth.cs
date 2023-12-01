@@ -2,6 +2,7 @@
 using FirstGearGames.SmoothCameraShaker;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -28,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float shakeTime = 0.2f;
     [SerializeField] private AudioSource Hurt;
 
+    public GameObject playerDestroy;
     private Color flashColor = Color.red;
     private float flashDuration = 0.2f;
     private Renderer characterSR;
@@ -131,5 +133,6 @@ public class PlayerHealth : MonoBehaviour
     public void Death()
     {
         Destroy(gameObject);
+        Instantiate(playerDestroy, transform.position, Quaternion.identity);
     }
 }
