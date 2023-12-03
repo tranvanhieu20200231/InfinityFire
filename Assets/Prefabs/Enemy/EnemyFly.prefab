@@ -194,8 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9bfc98dad993a4ba0131e6687eea16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDamage: 5
-  maxDamage: 10
+  minDamage: 10
+  maxDamage: 15
 --- !u!114 &2600480956863597903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,8 +297,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0176121addafdc4daa14735aa197bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
-  scoreEnemy: 30
+  maxHealth: 100
+  minScore: 30
+  maxScore: 50
   enemyHurt: {fileID: 1037732379354279279}
   enemyHealthBar: {fileID: 5635007271847081097}
   damagePopup: {fileID: 7898853511194804881, guid: 1f39af48d70f78549a0a5ad3c5e390e6, type: 3}

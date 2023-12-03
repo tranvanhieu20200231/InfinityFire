@@ -75,6 +75,9 @@ public class WeaponSwitching : MonoBehaviour
             weapon.SetActive(false);
         }
 
-        weapons[currentWeaponIndex].SetActive(true);
+        if (currentWeaponIndex < weapons.Length)
+        {
+            weapons[currentWeaponIndex].SetActive(true);
+        }
     }
 }

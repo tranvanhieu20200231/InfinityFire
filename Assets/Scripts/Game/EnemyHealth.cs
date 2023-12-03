@@ -8,7 +8,9 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int maxHealth;
     int currentHealth;
-    [SerializeField] int scoreEnemy;
+    [SerializeField] int minScore;
+    [SerializeField] int maxScore;
+    int scoreEnemy;
     Score score;
 
     [Header("Camera Shake Parameters")]
@@ -42,6 +44,7 @@ public class EnemyHealth : MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
 
+        scoreEnemy = Random.Range(minScore, maxScore);
         currentHealth = maxHealth;
         damagePopup.UpdateText(0);
         enemyHealthBar.UpdateBar(currentHealth, maxHealth);

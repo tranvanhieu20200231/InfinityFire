@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
     public bool playerBullet;   // Player fire
     public bool pierce;         // Xuyen giap
 
+    public GameObject bulletDestroy;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Xu ly va cham cua bullet voi player, enemy
@@ -17,11 +19,13 @@ public class Bullet : MonoBehaviour
             int damage = Random.Range(minDamage, maxDamage);
             other.GetComponent<PlayerHealth>().TakeDamage(damage);
             Destroy(gameObject);
+            Instantiate(bulletDestroy, transform.position, Quaternion.identity);
         }
         // Xu ly va cham khien
         if (other.CompareTag("Shield") && !playerBullet)
         {
             Destroy(gameObject);
+            Instantiate(bulletDestroy, transform.position, Quaternion.identity);
         }
 
         if (other.CompareTag("Enemy") && playerBullet && !pierce)
@@ -29,6 +33,7 @@ public class Bullet : MonoBehaviour
             int damage = Random.Range(minDamage, maxDamage);
             other.GetComponent<EnemyHealth>().TakeDamage(damage);
             Destroy(gameObject);
+            Instantiate(bulletDestroy, transform.position, Quaternion.identity);
         }
 
         if (other.CompareTag("Enemy") && playerBullet && pierce)
@@ -40,6 +45,7 @@ public class Bullet : MonoBehaviour
         if (other.CompareTag("Obstacle"))
         {
             Destroy(gameObject);
+            Instantiate(bulletDestroy, transform.position, Quaternion.identity);
         }
     }
 }

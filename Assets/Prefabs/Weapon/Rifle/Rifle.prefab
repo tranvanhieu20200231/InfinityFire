@@ -101,15 +101,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6573190007503408060, guid: 64ecc3fb29426b340aaf9460a5e01072, type: 3}
   firePos: {fileID: 8283920222516598126}
-  muzzle: {fileID: 1122227761175300415, guid: 234f9ed0b6c50034292d330618c4cda7, type: 3}
+  muzzle: {fileID: 3911261044948157895, guid: d26c0df146bf5644f9bbe5870fd0692c, type: 3}
   TimeBtwFire: 0.05
   bulletForce: 20
   shotGun: 0
   bulletsPerShot: 10
   Fire: {fileID: 8283920221887933016}
-  cameraShake: {fileID: 0}
-  shakeIntensity: 0.5
-  shakeTime: 0.05
 --- !u!82 &8283920221887933016
 AudioSource:
   m_ObjectHideFlags: 0

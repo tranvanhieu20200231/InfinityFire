@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
 
         CDTBar.UpdateCDTimeBar(rollCDT, RollCD);
+        Time.timeScale = 1;
     }
 
     private void Update()
