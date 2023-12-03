@@ -7,6 +7,11 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
 
+    public void Menu()
+    {
+        SceneManager.LoadSceneAsync(0);
+        Time.timeScale = 1;
+    }
     public void Pause()
     {
         pauseMenu.SetActive(true);
@@ -29,6 +34,14 @@ public class PauseMenu : MonoBehaviour
     }
     public void Next()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+
+        if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
+        {
+            nextSceneIndex = 0;
+        }
+
+        SceneManager.LoadScene(nextSceneIndex);
     }
+
 }

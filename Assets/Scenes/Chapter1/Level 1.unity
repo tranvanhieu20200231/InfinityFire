@@ -9106,7 +9106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   youWin: {fileID: 1324260333}
-  requiredPoints: 1
+  requiredPoints: 200
   requiredEnemyDefeated: 0
   requiredBossDefeated: 0
 --- !u!82 &1245861142
