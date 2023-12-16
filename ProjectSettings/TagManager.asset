@@ -9,6 +9,9 @@ TagManager:
   - Bullet
   - FxTemporaire
   - Shield
+  - NPC
+  - EnemyBullet
+  - FXEnemy
   layers:
   - Default
   - TransparentFX
@@ -19,8 +22,8 @@ TagManager:
   - Player
   - Enemy
   - Bullet
-  - 
-  - 
+  - NPC
+  - SpaceShip
   - 
   - 
   - 

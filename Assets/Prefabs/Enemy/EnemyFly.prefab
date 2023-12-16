@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2600480954867373594}
   - component: {fileID: 2600480954867373592}
   - component: {fileID: 2600480954867373595}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 6308978220330501108}
   - component: {fileID: 6308978220330501109}
   - component: {fileID: 1037732379354279279}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: EnemyFly
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ Transform:
   m_GameObject: {fileID: 2600480956863597893}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.55, y: -2.06, z: -0.008428507}
+  m_LocalPosition: {x: -5.6252785, y: 0.44977283, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -194,8 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9bfc98dad993a4ba0131e6687eea16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDamage: 10
-  maxDamage: 15
+  minDamage: 5
+  maxDamage: 8
 --- !u!114 &2600480956863597903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +230,7 @@ MonoBehaviour:
   bulletSpeed: 5
   timeBtwFire: 2
   isRadiantBullets: 0
+  numberOfBullets: 36
 --- !u!114 &2600480956863597900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  minScore: 30
+  minScore: 40
   maxScore: 50
   enemyHurt: {fileID: 1037732379354279279}
   enemyHealthBar: {fileID: 5635007271847081097}
@@ -428,7 +429,7 @@ GameObject:
   - component: {fileID: 4191847618931158456}
   - component: {fileID: 4191847618931158457}
   - component: {fileID: 4191847618931158438}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +530,7 @@ GameObject:
   - component: {fileID: 5635007271847081098}
   - component: {fileID: 5635007271847081096}
   - component: {fileID: 5635007271847081097}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: EnemyHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -590,7 +591,7 @@ GameObject:
   - component: {fileID: 5635007272657459499}
   - component: {fileID: 5635007272657459497}
   - component: {fileID: 5635007272657459496}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +666,7 @@ GameObject:
   - component: {fileID: 5635007272993426035}
   - component: {fileID: 5635007272993426033}
   - component: {fileID: 5635007272993426032}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: FrameBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +741,7 @@ GameObject:
   - component: {fileID: 5635007273404321232}
   - component: {fileID: 5635007273404321246}
   - component: {fileID: 5635007273404321233}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: FillBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

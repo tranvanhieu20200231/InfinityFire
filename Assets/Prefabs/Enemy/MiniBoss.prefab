@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1338640561379734238}
   - component: {fileID: 525487358112192526}
   - component: {fileID: 6832123366326463494}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: EnemyHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 5704258116619204630}
   - component: {fileID: 6359709085923449447}
   - component: {fileID: 7972693636276952596}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 4602788110849441823}
   - component: {fileID: 3391264646315336567}
   - component: {fileID: 6534942533179750061}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 6722727403594171271}
   - component: {fileID: 2640676572986562618}
   - component: {fileID: 2963718147067989163}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 3714093364264019570}
   - component: {fileID: 10680759976229583}
   - component: {fileID: 6039866986171687739}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: FillBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 3543526235435555315}
   - component: {fileID: 5371924158117789164}
   - component: {fileID: 4365286245422562454}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: FrameBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 4687710030606430460}
   - component: {fileID: 7666669473337139857}
   - component: {fileID: 7195327313966285704}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MiniBoss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -657,8 +657,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9bfc98dad993a4ba0131e6687eea16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDamage: 20
-  maxDamage: 25
+  minDamage: 10
+  maxDamage: 15
 --- !u!114 &276220325648720998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,6 +710,7 @@ MonoBehaviour:
   bulletSpeed: 5
   timeBtwFire: 5
   isRadiantBullets: 1
+  numberOfBullets: 36
 --- !u!114 &4687710030606430460
 MonoBehaviour:
   m_ObjectHideFlags: 0

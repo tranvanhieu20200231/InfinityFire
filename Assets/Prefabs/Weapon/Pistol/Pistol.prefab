@@ -133,7 +133,7 @@ MonoBehaviour:
   bullet: {fileID: 6573190007503408060, guid: b1802a80a527e74499bdc79894805821, type: 3}
   firePos: {fileID: 2627812651841265914}
   muzzle: {fileID: 3911261044948157895, guid: d26c0df146bf5644f9bbe5870fd0692c, type: 3}
-  TimeBtwFire: 0.5
+  TimeBtwFire: 0.25
   bulletForce: 20
   shotGun: 0
   bulletsPerShot: 10
@@ -147,7 +147,7 @@ AudioSource:
   m_GameObject: {fileID: 2627812651979976168}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8848640999722283115, guid: d0b47eeb20c324044820ba95810b9627, type: 2}
   m_audioClip: {fileID: 8300000, guid: 05915bcabf38f2e41ae5fb86f4f6690d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
