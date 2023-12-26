@@ -175,6 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3c414ce5d95f941bad4abcd74b7e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDamage: 8
-  maxDamage: 15
+  minDamage: 20
+  maxDamage: 25
   bulletDestroy: {fileID: 6192724089161036641, guid: 941f3d6a9a595b84bafbf415c7e0c970, type: 3}

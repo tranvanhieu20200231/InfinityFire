@@ -7162,7 +7162,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 7280707448633853014, guid: eac3c693ca7a0e54b8ed6a186ce45327, type: 3}
+  - {fileID: 2600480956863597893, guid: b264db42b69d0cc44944f6d09d44621f, type: 3}
+  - {fileID: 5905293393663515922, guid: 2205bbf27a7a4254abd64a75197db3ee, type: 3}
+  - {fileID: 445547923870544844, guid: 3477750f89703084cad8b7893e5eae72, type: 3}
   spawnPoint: {fileID: 729637506}
   spawnInterval: 3
 --- !u!1 &732100402
@@ -11645,7 +11647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1171015012
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11758,7 +11760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1199616110
 Transform:
   m_ObjectHideFlags: 0
@@ -11768,7 +11770,7 @@ Transform:
   m_GameObject: {fileID: 1199616109}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.6, y: -2.2, z: 0}
+  m_LocalPosition: {x: -21.1, y: -3.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16338,10 +16340,10 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1199616110}
+  m_Follow: {fileID: 1816092879}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 8
+    OrthographicSize: 15
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -16367,7 +16369,7 @@ Transform:
   m_GameObject: {fileID: 1342971923}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.6, y: -2.2, z: -10}
+  m_LocalPosition: {x: 0, y: 5.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19198,7 +19200,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -19223,7 +19225,7 @@ Transform:
   m_GameObject: {fileID: 1672315462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.6, y: -2.2, z: -10}
+  m_LocalPosition: {x: 0, y: 5.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20329,7 +20331,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 7280707448633853014, guid: eac3c693ca7a0e54b8ed6a186ce45327, type: 3}
+  - {fileID: 2600480956863597893, guid: b264db42b69d0cc44944f6d09d44621f, type: 3}
+  - {fileID: 5905293393663515922, guid: 2205bbf27a7a4254abd64a75197db3ee, type: 3}
+  - {fileID: 445547923870544844, guid: 3477750f89703084cad8b7893e5eae72, type: 3}
   spawnPoint: {fileID: 1789062941}
   spawnInterval: 3
 --- !u!1 &1790986700
@@ -20542,7 +20546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1816092879
 Transform:
   m_ObjectHideFlags: 0
@@ -22419,7 +22423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2001542540
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22562,7 +22566,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 7280707448633853014, guid: eac3c693ca7a0e54b8ed6a186ce45327, type: 3}
+  - {fileID: 2600480956863597893, guid: b264db42b69d0cc44944f6d09d44621f, type: 3}
+  - {fileID: 5905293393663515922, guid: 2205bbf27a7a4254abd64a75197db3ee, type: 3}
+  - {fileID: 445547923870544844, guid: 3477750f89703084cad8b7893e5eae72, type: 3}
   spawnPoint: {fileID: 2008910513}
   spawnInterval: 3
 --- !u!1 &2040659664
@@ -23288,7 +23294,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 7280707448633853014, guid: eac3c693ca7a0e54b8ed6a186ce45327, type: 3}
+  - {fileID: 2600480956863597893, guid: b264db42b69d0cc44944f6d09d44621f, type: 3}
+  - {fileID: 5905293393663515922, guid: 2205bbf27a7a4254abd64a75197db3ee, type: 3}
+  - {fileID: 445547923870544844, guid: 3477750f89703084cad8b7893e5eae72, type: 3}
   spawnPoint: {fileID: 2106379159}
   spawnInterval: 3
 --- !u!1 &2113938639
@@ -23308,7 +23316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2113938640
 RectTransform:
   m_ObjectHideFlags: 0

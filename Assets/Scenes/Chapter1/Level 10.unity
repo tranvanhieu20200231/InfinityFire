@@ -8986,7 +8986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1359253264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12587,13 +12587,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  healthPopup: {fileID: 7898853511194804881, guid: d427080ca0d2e134796b6ccf4e590135, type: 3}
-  healthPopupPoints: {fileID: 2355592536662151252, guid: d427080ca0d2e134796b6ccf4e590135, type: 3}
   maxArmor: 100
   armoring: 10
   CDArmoring: 10
-  armorPopup: {fileID: 7898853511194804881, guid: 3a7f405b535b8c54e9e82322e6327135, type: 3}
-  armorPopupPoints: {fileID: 2355592536662151252, guid: 3a7f405b535b8c54e9e82322e6327135, type: 3}
   cameraShake: {fileID: 1978530689}
   shakeIntensity: 3
   shakeTime: 0.2

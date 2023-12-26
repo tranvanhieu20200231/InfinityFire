@@ -10,7 +10,7 @@ public class EnemyDefeated : MonoBehaviour
 
     public void UpdateEnemyDefeated(int enemeDefeated)
     {
-        currentEnemyDefeated += enemeDefeated;
+        currentEnemyDefeated = enemeDefeated;
         valueText.text = "MINIBOSS DEFEATED : " + currentEnemyDefeated.ToString();
     }
 }
